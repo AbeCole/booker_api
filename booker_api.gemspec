@@ -1,0 +1,29 @@
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'booker/version'
+
+Gem::Specification.new do |s|
+  s.required_ruby_version = '>= 2.1.0'
+
+  s.name          = 'booker_api'
+  s.version       = Booker::VERSION
+  s.authors     = ['AbeCole']
+  s.email       = ['me@abecole.com']
+  s.homepage    = 'https://github.com/AbeCole/booker_api'
+  s.summary       = %q{
+    Ruby client for the Booker v4 API - http://apidoc.booker.com
+  }
+  s.license       = 'MIT'
+  s.files       = Dir['{lib}/**/*', 'MIT-LICENSE', 'README.rdoc']
+
+  s.add_dependency 'httparty', '~> 0.14'
+  s.add_dependency 'activesupport', '>= 3.0.0'
+  s.add_dependency 'oj', '~> 2.10'
+
+  s.add_development_dependency 'bundler', '~> 1.10'
+  s.add_development_dependency 'rspec', '~> 3.0'
+  s.add_development_dependency 'shoulda-matchers', '~> 2.8.0'
+  s.add_development_dependency 'timecop', '>= 0.7.0'
+  s.add_development_dependency 'carmen', '~> 1.0.2'
+end
